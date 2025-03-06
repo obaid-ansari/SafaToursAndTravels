@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/** Contact Section */
+.contact-container {
+  height: 2.5rem;
+  background-color: #52ad2b;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+}
+
+.address p {
+  font-weight: 700;
+  padding-top: 15px;
+  padding-right: 10px;
+}
+
+.address a {
+  font-weight: 500;
+}
+
+.social a {
+  padding: 0vh 10px;
+  font-size: 1.5rem;
+  color: #eee;
+  transition: all 0.2s linear;
+  &:hover {
+    color: #fff;
+    text-shadow: 0px 0px 10px white;
+  }
+}
+
+/** Navbar Section */
+#nav {
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0px 5px 10px white;
+}
+
+.navbar-container {
+  background-color: white;
+  height: auto;
+  align-items: center;
+  display: flex;
+}
+
+.logosec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 2.5em;
+  text-align: center;
+  color: #000;
+  position: relative;
+  font-family: "Josefin Sans", serif;
+  margin-top: -10px;
+  text-shadow: 2px 2px 2px rgba(74, 74, 74, 0.5);
+  &::after {
+    content: "Tour And Travel";
+    font-size: 0.6rem;
+    font-family: "Josefin Sans", serif;
+    position: absolute;
+    width: 100%;
+    left: 2px;
+    bottom: 0px;
+  }
+}
+
+.logo span {
+  text-decoration: none;
+  font-family: "Josefin Sans", serif;
+  font-size: 1.8rem;
+  color: #000;
+  display: block;
+  margin-bottom: 25px;
+  line-height: 0px;
+}
+
+.navbar-container img {
+  height: 70px;
+}
+
+/* Medium Devices (Tablets) - 737px to 833px */
+@media only screen and (min-width: 737px) and (max-width: 833px) {
+  .logo {
+    font-size: 2.5em;
+    &::after {
+      font-size: 0.5rem;
+      bottom: 3px;
+    }
+  }
+
+  .logo span {
+    font-size: 1.6rem;
+  }
+
+  .navbar-container img {
+    height: 65px;
+  }
+}
+
+/* Small Devices (Tablets & Large Phones) - 480px to 736px */
+@media only screen and (min-width: 480px) and (max-width: 736px) {
+  .logo {
+    font-size: 2.2em;
+    &::after {
+      font-size: 0.5rem;
+      bottom: 5px;
+    }
+  }
+
+  .logo span {
+    font-size: 1.4rem;
+  }
+
+  .navbar-container img {
+    height: 60px;
+  }
+}
+
+/* Extra Small Devices (Phones) - Up to 480px */
+@media only screen and (max-width: 480px) {
+  .logo {
+    font-size: 2.2em;
+    &::after {
+      font-size: 0.5rem;
+      bottom: 5px;
+    }
+  }
+
+  .logo span {
+    font-size: 1.4rem;
+  }
+
+  .navbar-container img {
+    height: 55px;
+  }
+}

@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/** For All Headings  */
+.gradient {
+  background: linear-gradient(to right, #7549f2, #da53f7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/** Hero Section */
+.carousel-item img {
+  height: 70vh;
+  background-color: black;
+  object-fit: cover;
+}
+
+.carousel-caption h1 {
+  font-family: "Mea Culpa", serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin: 30px 0px;
+  text-shadow: 0px 0px 15px white;
+}
+
+.carousel-caption p {
+  text-shadow: 0px 0px 15px white;
+  margin: 30px 0px;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/** Services Card Section */
+.services-container {
+  height: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  padding: 0;
+  background-color: rgba(255, 255, 255);
+  border-radius: 20px;
+  transition: transform 0.1s;
+  &:hover {
+    transform: translateY(-15px) !important;
+  }
+}
+
+.cards img {
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/** Pilgrimages Section */
+.pilgrimages-container {
+  height: auto;
+}
+
+/** About Section */
+.about-container {
+  height: auto;
+  background-color: #dbcdff;
+}
+
+.content {
+  background-color: #fff;
+}
+
+/** Contact form */
+.contact-form-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.481);
+  padding: 1vh 1vw;
+  width: 90%;
+  max-width: 350px;
+  animation: pop-up-animation 0.6s;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.381);
+  border: none;
+}
+
+@keyframes pop-up-animation {
+  0% {
+    transform: rotateX(100deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/** Hotel card */
+.hotel-card {
+  transition: transform 0.1s;
+  &:hover {
+    transform: scale(1.02) !important;
+  }
+}
+
+.hotel-rating {
+  color: #f5c60d;
+}
+
+/** Medium Devices (Tablets) - 737px to 833px */
+@media only screen and (min-width: 737px) and (max-width: 833px) {
+  .carousel-item img {
+    height: 60vh;
+  }
+
+  .carousel-caption h1 {
+    font-size: 3rem;
+    margin: 30px 0px;
+  }
+
+  .carousel-caption p {
+    margin: 30px 0px;
+    font-size: 1.6rem;
+  }
+
+  .cards img {
+    height: 30vh;
+  }
+
+  .contact-form {
+    max-width: 60%;
+    padding: 2vh 2vw;
+  }
+}
+
+/** Small Devices (Tablets & Large Phones) - 480px to 736px */
+@media only screen and (min-width: 480px) and (max-width: 736px) {
+  .carousel-item img {
+    height: 60vh;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+    margin: 20px 0px;
+  }
+
+  .carousel-caption p {
+    margin: 20px 0px;
+    font-size: 1.2rem;
+  }
+
+  .cards img {
+    height: 30vh;
+  }
+
+  .contact-form {
+    max-width: 80%;
+    padding: 1vh 2vw;
+  }
+}
+
+/** Extra Small Devices (Phones) - Up to 480px */
+@media only screen and (max-width: 480px) {
+  .carousel-item img {
+    height: 60vh;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+    margin: 20px 0px;
+  }
+
+  .carousel-caption p {
+    margin: 20px 0px;
+    font-size: 1.2rem;
+  }
+
+  .cards img {
+    height: 25vh;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    padding: 1vh 2vw;
+  }
+}

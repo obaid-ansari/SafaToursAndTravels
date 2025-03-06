@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*! For Holidays page and for Umrah Hotels */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none;
+}
+.card-horizon {
+  width: 300px;
+  height: 400px;
+  flex: 0 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover {
+    transform: scale(1.02) !important;
+  }
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 5px 18px;
+  border-radius: 50%;
+  background-color: #ffffff82;
+  backdrop-filter: blur(10px);
+  border: none;
+  z-index: 10;
+  text-shadow: 0px 0px 2px black;
+  &:hover {
+    background-color: #ffffffd6;
+  }
+}
+.left-btn {
+  left: 20px;
+}
+.right-btn {
+  right: 20px;
+}
+
+/** Medium Devices (Tablets) - 737px to 833px */
+@media only screen and (min-width: 737px) and (max-width: 833px) {
+  .card-horizon {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+/** Small Devices (Tablets & Large Phones) - 480px to 736px */
+@media only screen and (min-width: 480px) and (max-width: 736px) {
+  .card-horizon {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+/** Extra Small Devices (Phones) - Up to 480px */
+@media only screen and (max-width: 480px) {
+  .card-horizon {
+    width: 300px;
+    height: 400px;
+  }
+}

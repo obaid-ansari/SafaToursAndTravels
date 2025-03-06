@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  height: auto;
+  background-color: #fff;
+}
+
+.footerCol-2 a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #eee;
+  transition: all 0.2s linear;
+  &:hover {
+    color: #fff;
+    text-shadow: 0px 0px 20px white;
+  }
+}
+.footerCol-2 li {
+  list-style: none;
+}
+
+.footerCol-3 a {
+  padding: 0vh 6px;
+  font-size: 1.5rem;
+  color: #eee;
+  transition: all 0.2s linear;
+  &:hover {
+    color: #fff;
+    text-shadow: 0px 0px 10px white;
+  }
+}
+
+.lower-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.291);
+}
+
+/* Medium Devices (Tablets) - 737px to 833px */
+@media only screen and (min-width: 737px) and (max-width: 833px) {
+  /*  */
+}
+
+/* Small Devices (Tablets & Large Phones) - 480px to 736px */
+@media only screen and (min-width: 480px) and (max-width: 736px) {
+  /*  */
+}
+
+/* Extra Small Devices (Phones) - Up to 480px */
+@media only screen and (max-width: 480px) {
+  /*  */
+}
