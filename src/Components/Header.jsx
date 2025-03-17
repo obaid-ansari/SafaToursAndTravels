@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "../Css/Header.css";
 import ITIA from "../assets/ITIA.webp";
 import ContactForm from "./ContactForm";
+import FlightTickets from "../Pages/FlightTickets";
+import Visa from "../Pages/Visa";
+import Hotels from "../Pages/Hotels";
+import Forex from "../Pages/Forex";
 
 const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -27,6 +31,10 @@ const Header = () => {
   }, [isToggled]);
 
   const [showContact, setShowContact] = useState(false);
+  const [showFlight, setShowFlight] = useState(false);
+  const [showForex, setShowForex] = useState(false);
+  const [showVisa, setShowVisa] = useState(false);
+  const [showHotels, setShowHotels] = useState(false);
 
   const blurrybg = () => {
     // document.body.style.overflow = "hidden"; // Prevent scrolling
@@ -59,6 +67,14 @@ const Header = () => {
     <>
       {/* Show Contact Form */}
       {showContact && <ContactForm onClose={() => setShowContact(false)} />}
+      {/* Show Flight Form */}
+      {showFlight && <FlightTickets onClose={() => setShowFlight(false)} />}
+      {/* Show Visa Form */}
+      {showVisa && <Visa onClose={() => setShowVisa(false)} />}
+      {/* Show Hotels Form */}
+      {showHotels && <Hotels onClose={() => setShowHotels(false)} />}
+      {/* Show Forex Form */}
+      {showForex && <Forex onClose={() => setShowForex(false)} />}
       {/* Contact Information */}
       <div className="contact-container d-none d-lg-flex" data-aos="fade-down">
         <div className="address">
@@ -73,7 +89,8 @@ const Header = () => {
           </a>
           <a
             className="text-decoration-none ms-1 text-white"
-            href="mailto:safatoursandtravels7@gmail.com">
+            href="mailto:safatoursandtravels7@gmail.com"
+            target="_blank">
             <i className="fa-solid fa-envelope px-1"></i>
             safatoursandtravels
           </a>
@@ -84,16 +101,16 @@ const Header = () => {
             className="text-decoration-none"
             href="https://wa.me/+918976641643"
             target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp" target="_blank"></i>
           </a>
           <a href="https://www.instagram.com/safatoursandtravels7/?igsh=bnBuOHQ2OHhiaHJ4">
-            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram" target="_blank"></i>
           </a>
           <a href="#">
-            <i className="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-facebook" target="_blank"></i>
           </a>
           <a href="https://x.com/safatravels7">
-            <i className="fa-brands fa-x-twitter"></i>
+            <i className="fa-brands fa-x-twitter" target="_blank"></i>
           </a>
         </div>
       </div>
@@ -174,21 +191,30 @@ const Header = () => {
                   <li>
                     <Link
                       className="dropdown-item fw-bolder text-center"
-                      to="/flight-tickets">
+                      onClick={() => {
+                        setShowFlight(true);
+                        removeBlur();
+                      }}>
                       Flight
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="dropdown-item fw-bolder text-center"
-                      to="/visa-assistance">
+                      onClick={() => {
+                        setShowVisa(true);
+                        removeBlur();
+                      }}>
                       Visa
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="dropdown-item fw-bolder text-center"
-                      to="/hotels-booking">
+                      onClick={() => {
+                        setShowHotels(true);
+                        removeBlur();
+                      }}>
                       Hotels
                     </Link>
                   </li>
@@ -202,7 +228,10 @@ const Header = () => {
                   <li>
                     <Link
                       className="dropdown-item fw-bolder text-center"
-                      to="/forex-exchange">
+                      onClick={() => {
+                        setShowForex(true);
+                        removeBlur();
+                      }}>
                       Forex
                     </Link>
                   </li>

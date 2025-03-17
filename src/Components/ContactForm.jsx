@@ -1,20 +1,37 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const ContactForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    number: "",
+    phone: "",
     message: "",
   });
 
+  const [submitStatus, setSubmitStatus] = useState("Submit");
+
   const handleChange = (e) => {
+    // const { id, value } = e.target;
+    // setFormData({ ...formData, [id]: value });
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    setSubmitStatus("Submitting...");
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/contact",
+        formData
+      );
+      alert(res.data.message);
+      setSubmitStatus("Submitted");
+    } catch (error) {
+      alert("Failed to send message");
+      setSubmitStatus("Submit");
+    }
   };
 
   return (
@@ -22,8 +39,8 @@ const ContactForm = ({ onClose }) => {
       className="contact-form-wrapper"
       id="contact-form-wrapper"
       style={{ display: "flex" }}>
-      <div className="contact-form rounded-4">
-        <h3 className="text-center fw-bolder text-dark">Contact Us</h3>
+      <div className="position-relative contact-form rounded-4">
+        <h3 className="text-center fw-bolder text-uppercase">Contact Us</h3>
         <form onSubmit={handleSubmit}>
           <label className="fw-bold" htmlFor="name">
             Name:
@@ -32,7 +49,7 @@ const ContactForm = ({ onClose }) => {
             className="form-control fw-semibold my-1"
             type="text"
             id="name"
-            placeholder="Enter your full name"
+            placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -45,7 +62,7 @@ const ContactForm = ({ onClose }) => {
             className="form-control fw-semibold my-1"
             type="email"
             id="email"
-            placeholder="Enter your email address"
+            placeholder="Your Email Address"
             value={formData.email}
             onChange={handleChange}
             required
@@ -57,8 +74,8 @@ const ContactForm = ({ onClose }) => {
           <input
             className="form-control fw-semibold my-1"
             type="tel"
-            id="number"
-            placeholder="Enter your phone number"
+            id="phone"
+            placeholder="Your phone Number"
             value={formData.number}
             onChange={handleChange}
             required
@@ -76,15 +93,20 @@ const ContactForm = ({ onClose }) => {
             onChange={handleChange}
             required></textarea>
 
-          <button type="submit" className="btn btn-success fw-bolder mt-2 me-2">
-            Submit
+          {/* Submit button with dynamic text */}
+          <button
+            type="submit"
+            className="btn btn-success fw-bolder mt-2 w-100"
+            disabled={submitStatus === "Submitting..."}>
+            {submitStatus}
           </button>
+
           <button
             type="button"
-            className="btn btn-danger mt-2 fw-bolder"
+            className="btn btn-lg mt-2 fw-bolder"
             id="close-form"
             onClick={onClose}>
-            Close
+            <i class="fa-solid fa-xmark"></i>
           </button>
         </form>
       </div>

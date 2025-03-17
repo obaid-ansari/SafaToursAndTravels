@@ -14,6 +14,10 @@ import Ramadan from "../assets/Ramadan.webp";
 import Umrahramadan from "../assets/Umrahramadan.webp";
 import Ziyarat from "../assets/Ziyarat.webp";
 import ContactForm from "./ContactForm";
+import FlightTickets from "../Pages/FlightTickets";
+import ForexExchange from "../Pages/Forex";
+import HotlesBooking from "../Pages/Hotels";
+import VisaBooking from "../Pages/Visa";
 
 const Home = () => {
   useEffect(() => {
@@ -21,11 +25,23 @@ const Home = () => {
   }, []); // Empty dependency array means this runs only once on mount
 
   const [showContact, setShowContact] = useState(false);
+  const [showFlight, setShowFlight] = useState(false);
+  const [showForex, setShowForex] = useState(false);
+  const [showHotels, setShowHotels] = useState(false);
+  const [showVisa, setShowVisa] = useState(false);
 
   return (
     <main>
       {/* Show Contact Form */}
       {showContact && <ContactForm onClose={() => setShowContact(false)} />}
+      {/* Show Flight Form */}
+      {showFlight && <FlightTickets onClose={() => setShowFlight(false)} />}
+      {/* Show Forex Form */}
+      {showForex && <ForexExchange onClose={() => setShowForex(false)} />}
+      {/* Show Hotels Form */}
+      {showHotels && <HotlesBooking onClose={() => setShowHotels(false)} />}
+      {/* Show Visa Form */}
+      {showVisa && <VisaBooking onClose={() => setShowVisa(false)} />}
       <Hero />
       {/* Services Section */}
       <section id="services">
@@ -40,26 +56,38 @@ const Home = () => {
                 image={Flight}
                 title="Flight Tickets"
                 description="Safely book domestic and international flights at the best prices with Safa Travels."
-                btnText="Book Flight"
-                link="/flight-tickets"
-              />
+                btnHide="d-none">
+                <button
+                  className="btn btn-dark bg-gradient m-2"
+                  onClick={() => setShowFlight(true)}>
+                  Book Flight
+                </button>
+              </Cards>
 
               <Cards
                 image={Visa}
                 title="Visa Assistance"
                 description="Expert visa assistance to make your travel process smooth and stress-free."
-                btnText="Apply Now"
-                link="/visa-assistance"
-              />
+                btnHide="d-none">
+                <button
+                  className="btn btn-dark bg-gradient m-2"
+                  onClick={() => setShowVisa(true)}>
+                  Apply Now
+                </button>
+              </Cards>
 
               <Cards
                 image={Hotels}
                 title="Hotels Booking"
                 description="Discover and reserve the perfect hotels to match your comfort
                 and budget."
-                btnText="Book Hotel"
-                link="/hotels-booking"
-              />
+                btnHide="d-none">
+                <button
+                  className="btn btn-dark bg-gradient m-2"
+                  onClick={() => setShowHotels(true)}>
+                  Book Hotel
+                </button>
+              </Cards>
 
               <Cards
                 image={Holidays}
@@ -75,9 +103,13 @@ const Home = () => {
                 title="Forex Exchange"
                 description="Get the best currency exchange rates with fast and reliable
                 services at Safa Travels."
-                btnText="Exchange Now"
-                link="/forex-exchange"
-              />
+                btnHide="d-none">
+                <button
+                  className="btn btn-dark bg-gradient m-2"
+                  onClick={() => setShowForex(true)}>
+                  Exchange Now
+                </button>
+              </Cards>
             </div>
           </div>
         </div>

@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Css/Footer.css";
 import { Link } from "react-router-dom";
+import ContactForm from "./ContactForm";
+import FlightTickets from "../Pages/FlightTickets";
+import Visa from "../Pages/Visa";
+import Hotels from "../Pages/Hotels";
+import Forex from "../Pages/Forex";
+
 const Footer = () => {
+  const [showContact, setShowContact] = useState(false);
+  const [showFlight, setShowFlight] = useState(false);
+  const [showForex, setShowForex] = useState(false);
+  const [showVisa, setShowVisa] = useState(false);
+  const [showHotels, setShowHotels] = useState(false);
+
   return (
     <>
       <footer>
+        {showContact && <ContactForm onClose={() => setShowContact(false)} />}
+        {/* Show Flight Form */}
+        {showFlight && <FlightTickets onClose={() => setShowFlight(false)} />}
+        {/* Show Visa Form */}
+        {showVisa && <Visa onClose={() => setShowVisa(false)} />}
+        {/* Show Hotels Form */}
+        {showHotels && <Hotels onClose={() => setShowHotels(false)} />}
+        {/* Show Forex Form */}
+        {showForex && <Forex onClose={() => setShowForex(false)} />}
         <div className="footer-container bg-black">
           <div className="footer p-4">
             <div className="row ">
@@ -40,19 +61,39 @@ const Footer = () => {
                     <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/flight-tickets">Flight Tickets</Link>
+                    <Link
+                      onClick={() => {
+                        setShowFlight(true);
+                      }}>
+                      Flight Tickets
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/visa-assistance"> Visa Assistance</Link>
+                    <Link
+                      onClick={() => {
+                        setShowVisa(true);
+                      }}>
+                      Visa Assistance
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/hotels-booking">Hotels Booking</Link>
+                    <Link
+                      onClick={() => {
+                        setShowHotels(true);
+                      }}>
+                      Hotels Booking
+                    </Link>
                   </li>
                   <li>
                     <Link to="/holiday-packages">Holiday Packages</Link>
                   </li>
                   <li>
-                    <Link to="/forex-exchange">Forex Exchange</Link>
+                    <Link
+                      onClick={() => {
+                        setShowForex(true);
+                      }}>
+                      Forex Exchange
+                    </Link>
                   </li>
                   <li>
                     <Link to="/umrah-packages">Umrah Packages</Link>
@@ -72,17 +113,19 @@ const Footer = () => {
                 <a href="https://wa.me/+918976641643" target="_blank">
                   <i class="fa-brands fa-whatsapp"></i>
                 </a>
-                <a href="mailto:safatoursandtravels7@gmail.com">
+                <a href="mailto:safatoursandtravels7@gmail.com" target="_blank">
                   <i className="fa-solid fa-envelope px-1"></i>
                 </a>
-                <a href="https://www.instagram.com/safatoursandtravels7/?igsh=bnBuOHQ2OHhiaHJ4">
+                <a
+                  href="https://www.instagram.com/safatoursandtravels7/?igsh=bnBuOHQ2OHhiaHJ4"
+                  target="_blank">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a href="#">
-                  <i className="fa-brands fa-facebook"></i>
+                  <i className="fa-brands fa-facebook" target="_blank"></i>
                 </a>
                 <a href="https://x.com/safatravels7">
-                  <i className="fa-brands fa-x-twitter"></i>
+                  <i className="fa-brands fa-x-twitter" target="_blank"></i>
                 </a>
               </div>
               <div className="text-white lower-footer  text-center">

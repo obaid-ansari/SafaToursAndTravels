@@ -1,12 +1,28 @@
-# React + Vite
+# Safa Tours and Travels
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Safa Tours and Travels**, a comprehensive online platform designed to offer travelers an all-in-one solution for booking flights, hotels, visas, holiday packages, and more. Our platform also specializes in providing religious pilgrimage services, including Hajj, Umrah, and Ramadan packages.
 
-Currently, two official plugins are available:
+This repository contains the source code for the website, including its frontend, backend, and email communication features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
 
-## Expanding the ESLint configuration
+**Safa Tours and Travels** is a user-friendly web-based platform providing essential services for all your travel needs. Whether you need to book flights, hotels, or visas, or are interested in religious pilgrimage services, we have you covered. Our contact form allows users to easily submit inquiries, with details sent directly to the admin's Gmail account for efficient communication.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- **Flight Booking**: Book domestic and international flights with ease.
+- **Visa Services**: Apply for a variety of visas quickly and securely.
+- **Hotel Booking**: Reserve hotels based on destination preferences.
+- **Forex Exchange**: Get competitive forex exchange rates.
+- **Holiday Packages**: Explore customized and affordable holiday packages.
+- **Religious Pilgrimages**: Convenient booking of Hajj, Umrah, and Ramadan packages.
+- **Contact Form**: A responsive form to collect user details, automatically sent to the admin's Gmail for streamlined communication.
+
+## Technologies Used
+
+The website is built with the following technologies:
+
+- **Frontend**: React js, Bootstrap
+- **Backend**: Node.js
+- **Email Service**: Nodemailer for sending form submissions directly to Gmail
+- **Form Handling**: Node.js backend used for processing and sending form data
