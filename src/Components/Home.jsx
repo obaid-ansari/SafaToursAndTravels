@@ -12,7 +12,7 @@ import Hajj from "../assets/Hajj.webp";
 import Umrah from "../assets/Umrah.webp";
 import Ramadan from "../assets/Ramadan.webp";
 import Umrahramadan from "../assets/Umrahramadan.webp";
-import Ziyarat from "../assets/Ziyarat.webp";
+import Karbala from "../assets/Karbala.webp";
 import ContactForm from "./ContactForm";
 import FlightTickets from "../Pages/FlightTickets";
 import ForexExchange from "../Pages/Forex";
@@ -173,9 +173,9 @@ const Home = () => {
               </Cards>
 
               <Cards
-                image={Ziyarat}
-                title="Ziyarat"
-                description="Ziyarat is a pilgrimage to sacred Islamic sites for blessings and devotion."
+                image={Karbala}
+                title="Karbala"
+                description="Ziyarat of Karbala is a pilgrimage to the shrine of Imam Hussain, a symbol of sacrifice and faith in Islam."
                 btnHide="d-none">
                 <button
                   className="btn btn-dark bg-gradient m-2"
@@ -189,7 +189,7 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <AboutUs />
+      <AboutUs loading="lazy" />
     </main>
   );
 };

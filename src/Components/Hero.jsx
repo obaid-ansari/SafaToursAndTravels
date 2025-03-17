@@ -45,7 +45,12 @@ const Hero = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={Image1} className="d-block w-100" alt="..." />
+            <img
+              src={Image1}
+              className="d-block w-100"
+              alt="..."
+              loading="lazy"
+            />
             <div className="carousel-caption">
               <h1 data-aos="fade-down">Welcome to Safa Tour and Travel</h1>
               <p data-aos="fade-up">

@@ -39,6 +39,7 @@ const HotelCard = ({ hotel }) => {
       data-aos="fade-down"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      loading="lazy"
       style={hotelCardCss}>
       <div
         className="text-white text-center rounded-bottom-4 p-1"

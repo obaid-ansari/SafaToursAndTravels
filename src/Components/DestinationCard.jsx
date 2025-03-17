@@ -9,6 +9,7 @@ const DestinationCard = ({ customClass, image, title, description }) => {
     <div
       className={`${customClass} text-white shadow bg-light mx-4 rounded-4 card-horizon 
       `}
+      loading="lazy"
       style={{
         backgroundImage: `url(${image})`,
       }}

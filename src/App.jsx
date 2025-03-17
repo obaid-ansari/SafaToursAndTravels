@@ -19,14 +19,18 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/flight-tickets" element={<FlightTickets />} />
-        <Route path="/visa-assistance" element={<Visa />} />
-        <Route path="/hotels-booking" element={<Hotels />} />
-        <Route path="/holiday-packages" element={<Holidays />} />
-        <Route path="/forex-exchange" element={<Forex />} />
-        <Route path="/umrah-packages" element={<Umrah />} />
+        <Route
+          loading="lazy"
+          path="/flight-tickets"
+          element={<FlightTickets />}
+        />
+        <Route loading="lazy" path="/visa-assistance" element={<Visa />} />
+        <Route loading="lazy" path="/hotels-booking" element={<Hotels />} />
+        <Route loading="lazy" path="/holiday-packages" element={<Holidays />} />
+        <Route loading="lazy" path="/forex-exchange" element={<Forex />} />
+        <Route loading="lazy" path="/umrah-packages" element={<Umrah />} />
       </Routes>
-      <Footer />
+      <Footer loading="lazy" />
     </Router>
   );
 }
