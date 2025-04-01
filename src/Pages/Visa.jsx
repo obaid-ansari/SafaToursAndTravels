@@ -58,7 +58,7 @@ const FlightTickets = ({ onClose }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/visa",
+        "https://safa-backend.onrender.com/api/visa",
         formattedData
       );
       alert(res.data.message);

@@ -175,7 +175,7 @@ const Home = () => {
               <Cards
                 image={Karbala}
                 title="Karbala"
-                description="Ziyarat of Karbala is a pilgrimage to the shrine of Imam Hussain, a symbol of sacrifice and faith in Islam."
+                description="Ziyarat of Karbala is a pilgrimage to Imam Hussain's shrine, symbolizing sacrifice and faith in Islam."
                 btnHide="d-none">
                 <button
                   className="btn btn-dark bg-gradient m-2"
