@@ -36,7 +36,7 @@ const Footer = () => {
                     className="logo text-white"
                     aria-label="Safa Tour and Travel logo"
                     style={{ textShadow: "0px 0px 5px white" }}>
-                    صٰفَاء
+                    صفا
                     <span
                       className="text-white"
                       style={{ textShadow: "0px 0px 5px white" }}>

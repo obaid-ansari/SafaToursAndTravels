@@ -37,9 +37,6 @@ const Header = () => {
   const [showHotels, setShowHotels] = useState(false);
 
   const blurrybg = () => {
-    // document.body.style.overflow = "hidden"; // Prevent scrolling
-
-    // Get all elements **after** the navbar
     const nav = document.querySelector(".navbar");
     let nextElements = nav ? nav.nextElementSibling : null;
 
@@ -51,9 +48,6 @@ const Header = () => {
 
   // Function to remove the blur effect
   const removeBlur = () => {
-    // document.body.style.overflow = "auto"; // Allow scrolling again
-
-    // Remove blur from all elements after navbar
     const nav = document.querySelector(".navbar");
     let nextElements = nav ? nav.nextElementSibling : null;
 
@@ -122,7 +116,7 @@ const Header = () => {
         <div className="container navbar-container">
           <div className="logosec ">
             <a href="/" className="logo p-0 m-0">
-              صٰفَاء<span>SAFA</span>
+              صفا<span>SAFA</span>
             </a>
             <img loading="lazy" src={ITIA} alt="ITIA LOGO" />
           </div>

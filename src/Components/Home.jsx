@@ -10,7 +10,6 @@ import Holidays from "../assets/Holidays.webp";
 import Forex from "../assets/Forex.webp";
 import Hajj from "../assets/Hajj.webp";
 import Umrah from "../assets/Umrah.webp";
-import Ramadan from "../assets/Ramadan.webp";
 import Umrahramadan from "../assets/Umrahramadan.webp";
 import Karbala from "../assets/Karbala.webp";
 import ContactForm from "./ContactForm";
@@ -138,19 +137,6 @@ const Home = () => {
                 title="Hajj Packages"
                 description=" Discover our Hajj packages with travel, accommodations, and
                   guided experiences."
-                btnHide="d-none">
-                <button
-                  className="btn btn-dark bg-gradient m-2"
-                  onClick={() => setShowContact(true)}>
-                  Book Now
-                </button>
-              </Cards>
-
-              <Cards
-                image={Ramadan}
-                title="Ramadan packages"
-                description="Ramadan is a month of fasting, happiness, reflection for Muslims
-                  worldwide."
                 btnHide="d-none">
                 <button
                   className="btn btn-dark bg-gradient m-2"
