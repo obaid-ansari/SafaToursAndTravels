@@ -26,3 +26,41 @@ The website is built with the following technologies:
 - **Backend**: Node.js
 - **Email Service**: Nodemailer for sending form submissions directly to Gmail
 - **Form Handling**: Node.js backend used for processing and sending form data
+
+## Installation Guide
+
+Follow the steps below to set up and run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
+
+### 2. Install Dependencies
+
+### frontend
+
+```bash
+npm install
+```
+
+### backend
+
+```bash
+cd backend
+npm install
+```
+
+### 3. Start the Backend Server
+
+```bash
+cd backend
+npm start
+nodemon server.js
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file inside the `backend` directory and add the necessary environment variables.
+Let me know if you want to include frontend run instructions (`npm start` or `npm run dev`) as well!
