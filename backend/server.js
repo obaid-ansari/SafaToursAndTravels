@@ -21,6 +21,6 @@ app.use("/api/forex", forexRoutes);
 
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`✅Server is running on port ${PORT}`);
+  console.log(`✅ Server is running`);
   console.log(`http://localhost:${PORT}`);
 });

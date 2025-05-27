@@ -141,7 +141,7 @@
   .logo {
     font-size: 2.2em;
     &::after {
-      font-size: 0.5rem;
+      font-size: 0.4rem;
       bottom: 5px;
     }
   }
