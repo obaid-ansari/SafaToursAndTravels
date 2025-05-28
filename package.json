@@ -1,4 +1,5 @@
 {
+  "homepage": "https://obaid-ansari.github.io/SafaToursAndTravels/",
   "name": "safatour",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +9,9 @@
     "start": "node --watch ./backend/server.js",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist "
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -19,6 +22,7 @@
     "axios": "^1.9.0",
     "axois": "^0.0.1-security",
     "bootstrap": "^5.3.6",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.1.0",
