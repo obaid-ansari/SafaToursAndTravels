@@ -14,7 +14,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/SafaToursAndTravels">
       <ScrollToTop />
       <Header />
       <Routes>
