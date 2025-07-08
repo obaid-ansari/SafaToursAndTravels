@@ -61,7 +61,7 @@ const Forex = ({ onClose }) => {
     setSubmitStatus("Submitting...");
     try {
       const res = await axios.post(
-        "https://safa-backend.onrender.com/api/forex",
+        "/api/forex",
         formData
       );
       alert(res.data.message);

@@ -63,21 +63,21 @@ const UmrahPackages = ({
                     <span className="fw-semibold">&#8377; {price1}</span>
                   </p>
                 </div>
-                <div className="bg-success-subtle rounded-3 mb-1">
+                <div className={`${bgColor} rounded-3 mb-1`}>
                   <p className="fw-bold p-1">
                     Quad 4 Person
                     <br />
                     <span className="fw-semibold">&#8377; {price2}</span>
                   </p>
                 </div>
-                <div className="bg-success-subtle rounded-3 mb-1">
+                <div className={`${bgColor} rounded-3 mb-1`}>
                   <p className="fw-bold p-1">
                     Tripple 3 Person
                     <br />
                     <span className="fw-semibold">&#8377; {price3}</span>
                   </p>
                 </div>
-                <div className="bg-success-subtle rounded-3 mb-1">
+                <div className={`${bgColor} rounded-3 mb-1`}>
                   <p className="fw-bold p-1">
                     2 Person or couple
                     <br />

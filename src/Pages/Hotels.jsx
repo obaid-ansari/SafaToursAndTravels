@@ -56,7 +56,7 @@ const Hotels = ({ onClose }) => {
 
     try {
       const res = await axios.post(
-        "https://safa-backend.onrender.com/api/hotels",
+        "/api/hotels",
         formattedData
       );
       alert(res.data.message);

@@ -62,8 +62,9 @@ const FlightTickets = ({ onClose }) => {
     console.log(formattedData); // Check the formatted data before submission
 
     try {
+      // const res = await axios.post("api/flight", formattedData);
       const res = await axios.post(
-        "https://safa-backend.onrender.com/api/flight",
+        "http://localhost:5000/api/flight",
         formattedData
       );
       alert(res.data.message);

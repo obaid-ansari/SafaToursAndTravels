@@ -12,8 +12,6 @@ const ContactForm = ({ onClose }) => {
   const [submitStatus, setSubmitStatus] = useState("Submit");
 
   const handleChange = (e) => {
-    // const { id, value } = e.target;
-    // setFormData({ ...formData, [id]: value });
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
@@ -22,10 +20,7 @@ const ContactForm = ({ onClose }) => {
     setSubmitStatus("Submitting...");
 
     try {
-      const res = await axios.post(
-        "https://safa-backend.onrender.com/api/contact",
-        formData
-      );
+      const res = await axios.post("/api/contact", formData);
       alert(res.data.message);
       setSubmitStatus("Submitted");
     } catch (error) {
