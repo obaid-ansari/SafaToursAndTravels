@@ -1,0 +1,220 @@
+/* COMMON CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Cinzel", serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.text-color {
+  color: #0b1120;
+}
+
+.bg-color {
+  background-color: #f9f6f0;
+}
+
+.dark-bg {
+  background: linear-gradient(
+    135deg,
+    #06090f 0%,
+    #0d1422 15%,
+    #2a374d 35%,
+    #5b6778 50%,
+    #2a374d 65%,
+    #0d1422 85%,
+    #06090f 100%
+  );
+}
+
+.dark-text {
+  background: linear-gradient(
+    135deg,
+    #06090f 0%,
+    #0d1422 15%,
+    #2a374d 35%,
+    #5b6778 50%,
+    #2a374d 65%,
+    #0d1422 85%,
+    #06090f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.silver-bg {
+  background: linear-gradient(
+    135deg,
+    #757d86 0%,
+    #a3abb3 15%,
+    #cfd5dc 35%,
+    #eceff2 50%,
+    #cfd5dc 65%,
+    #a3abb3 85%,
+    #757d86 100%
+  );
+}
+
+.silver-text {
+  background: linear-gradient(
+    135deg,
+    #757d86 0%,
+    #a3abb3 25%,
+    #cfd5dc 50%,
+    #a3abb3 75%,
+    #757d86 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.gold-bg {
+  background: linear-gradient(
+    135deg,
+    #806010 0%,
+    #bc9230 15%,
+    #dfbc58 35%,
+    #f1df94 50%,
+    #dfbc58 65%,
+    #bc9230 85%,
+    #806010 100%
+  );
+}
+
+.gold-text {
+  background: linear-gradient(
+    135deg,
+    #c89d2e 0%,
+    #e6c565 25%,
+    #c89d2e 50%,
+    #a87909 75%,
+    #f3e3a5 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/** Navbar Logo */
+.logo {
+  height: 80px;
+  margin: 0;
+}
+.iata {
+  height: 60px;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-4px);
+}
+
+/** Hero section */
+
+.hero {
+  width: 100%;
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Footer section */
+
+footer a {
+  transition: 0.3s ease;
+}
+
+footer a:hover {
+  color: #d4af37 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+/* Umrah page */
+.accordion-button {
+  background-color: #fff !important;
+  color: #0b1120 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+@media only screen and (min-width: 737px) and (max-width: 833px) {
+  .logo {
+    height: 80px;
+  }
+
+  .iata {
+    height: 60px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    visibility: hidden;
+  }
+}
+
+/** Small Devices (Tablets & Large Phones) - 480px to 736px */
+@media only screen and (min-width: 480px) and (max-width: 736px) {
+  .logo {
+    height: 70px;
+  }
+  .iata {
+    height: 55px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    visibility: hidden;
+  }
+}
+
+/** Extra Small Devices (Phones) - Up to 480px */
+@media only screen and (max-width: 480px) {
+  .logo {
+    height: 60px;
+  }
+  .iata {
+    height: 45px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    visibility: hidden;
+  }
+}

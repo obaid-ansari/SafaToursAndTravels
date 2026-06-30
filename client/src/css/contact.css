@@ -1,0 +1,39 @@
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fade 0.3s linear;
+}
+
+.contact-modal {
+  width: min(500px, 100%);
+  position: relative;
+  animation: popup 0.3s linear;
+}
+
+@keyframes popup {
+  from {
+    transform: translateY(30px) scale(1.25);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
