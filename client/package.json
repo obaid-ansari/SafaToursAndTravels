@@ -1,5 +1,4 @@
 {
-  "homepage": "/safatoursandtravels/",
   "name": "client",
   "private": true,
   "version": "0.0.0",
@@ -8,16 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "aos": "^2.3.4",
     "axios": "^1.18.0",
     "bootstrap": "^5.3.8",
     "framer-motion": "^12.41.0",
-    "gh-pages": "^6.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-hot-toast": "^2.6.0",
