@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://safatoursandtravels-ypf9.onrender.com/api",
+  baseURL: "https://safatoursandtravels.vercel.app/api",
   withCredentials: true,
 });
 
